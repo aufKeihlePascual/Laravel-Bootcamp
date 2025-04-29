@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    public $firstName = "Keihle";
-    public $lastName = "Pascual";
-
     // public function HelloWorld () {
     //     return view('hello');
     // }
@@ -16,9 +13,19 @@ class HelloController extends Controller
     //array() the same as if it was just []
 
     public function HelloWorld () {
+        $firstName = "Keihle";
+        $lastName = "Pascual";
+
+        $num1 = 1;
+        $num2 = 2;
+        $sum = $num1 + $num2;
+        
         return view('hello', [  //an array
-            "test" => "AUF",
-            "case" => "Angeles City"
+            "first" => $firstName,
+            "last" => $lastName,
+            "num1" => $num1,
+            "num2" => $num2,
+            "sum" => $sum,
         ]);
     }
 }
